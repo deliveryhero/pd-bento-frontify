@@ -1,0 +1,24 @@
+{
+  "name": "pd-bento-design-docs",
+  "version": "1.0.0",
+  "description": "This repo is a place where you can find everything used to create interactive components for Bento Design documentation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deliveryhero/pd-bento-design-docs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deliveryhero/pd-bento-design-docs/issues"
+  },
+  "homepage": "https://github.com/deliveryhero/pd-bento-design-docs#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^5.0.0"
+  }
+}

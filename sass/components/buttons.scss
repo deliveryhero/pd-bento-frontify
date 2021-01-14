@@ -1,0 +1,7 @@
+// BUTTON PRIMARY
+///////////////////
+.button-primary-test {
+    color: $white;
+    background-color: $fp-brand-primary;
+    @include title-lg;
+}
