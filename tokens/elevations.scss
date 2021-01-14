@@ -1,0 +1,57 @@
+// X VALUES
+///////////////////
+$x-0: 0;
+$x-1: 1px;
+$x-2: 2px;
+$x-3: 3px;
+$x-4: 4px;
+
+
+// Y VALUES
+///////////////////
+$y-0: 0;
+$y-1: 1px;
+$y-2: 2px;
+$y-3: 3px;
+$y-4: 4px;
+
+
+// BLUR VALUES
+///////////////////
+$blur-0: 0;
+$blur-1: 5px;
+$blur-2: 10px;
+$blur-3: 20px;
+$blur-4: 30px;
+
+
+// SPREAD VALUES
+///////////////////
+$spread-0: 0;
+
+
+// ELEVATION COLORS
+///////////////////
+$dark-64: rgba(0, 0, 0, .64);
+
+
+// ELEVATIONS
+///////////////////
+@mixin elevation-template($x, $y, $blur, $spread, $color) {
+    box-shadow: $x $y $blur $spread $color;
+}
+@mixin elevation-level-0() {
+    @include elevation-template($x-0, $y-0, $blur-0, $spread-0, $dark-64);
+}
+@mixin elevation-level-1() {
+    @include elevation-template($x-1, $y-1, $blur-1, $spread-0, $dark-64);
+}
+@mixin elevation-level-2() {
+    @include elevation-template($x-2, $y-2, $blur-2, $spread-0, $dark-64);
+}
+@mixin elevation-level-3() {
+    @include elevation-template($x-3, $y-3, $blur-3, $spread-0, $dark-64);
+}
+@mixin elevation-level-4() {
+    @include elevation-template($x-4, $y-4, $blur-4, $spread-0, $dark-64);
+}

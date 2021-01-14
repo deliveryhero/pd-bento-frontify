@@ -1,0 +1,58 @@
+// FONT FAMILY
+///////////////////
+$font-family: "Roboto", sans-serif;
+
+
+// FONT SIZES
+///////////////////
+$font-size-xxs: 10px;
+$font-size-xs: 12px;
+$font-size-s: 14px;
+$font-size-m: 16px;
+$font-size-l: 18px;
+$font-size-xl: 24px;
+
+
+// FONT WEIGHTS
+///////////////////
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
+
+// LINE HEIGHTS
+///////////////////
+$line-height-reset: 1;
+$line-height-regular: 1.25;
+$line-height-spacious: 1.5;
+
+
+// TYPOGRAPHY STYLES
+///////////////////
+@mixin typography-template($font-size, $font-weight) {
+    font-size: $font-size;
+    font-weight: $font-weight;
+}
+@mixin title-lg() {
+    @include typography-template($font-size-xl, $font-weight-bold);
+}
+@mixin title-md() {
+    @include typography-template($font-size-l, $font-weight-bold);
+}
+@mixin title-sm() {
+    @include typography-template($font-size-m, $font-weight-bold);
+}
+@mixin body() {
+    @include typography-template($font-size-s, $font-weight-regular);
+}
+@mixin body-sm() {
+    @include typography-template($font-size-xs, $font-weight-regular);
+}
+@mixin highlight() {
+    @include typography-template($font-size-s, $font-weight-bold);
+}
+@mixin highlight-sm() {
+    @include typography-template($font-size-xs, $font-weight-bold);
+}
+@mixin highlight-xs() {
+    @include typography-template($font-size-xxs, $font-weight-bold);
+}
