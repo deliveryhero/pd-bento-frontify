@@ -1,5 +1,6 @@
 'use strict';
- 
+
+// SASS
 var gulp = require('gulp');
 var sass = require('gulp-sass');
  
@@ -13,4 +14,14 @@ gulp.task('sass', function () {
  
 gulp.task('sass:watch', function () {
   gulp.watch('./sass/main.scss', ['sass']);
+});
+
+
+// JS
+var bundle = require('gulp-bundle-file');
+ 
+gulp.task('js', function() {
+    return gulp.src('./js/*.bundle')
+        .pipe(bundle.concat())
+        .pipe(gulp.dest('./build'));
 });
