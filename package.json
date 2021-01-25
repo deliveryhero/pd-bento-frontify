@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/deliveryhero/pd-bento-design-docs.git"
   },
-  "husky":{
+  "husky": {
     "hooks": {
       "pre-commit": "yarn build && git add build"
     }
