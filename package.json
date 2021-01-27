@@ -4,11 +4,16 @@
   "description": "This repo is a place where you can find everything used to create interactive components for Bento Design documentation.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp js && gulp sass"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/deliveryhero/pd-bento-design-docs.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && git add build"
+    }
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +25,7 @@
     "gulp": "^4.0.2",
     "gulp-bundle-file": "^1.1.2",
     "gulp-sass": "^4.1.0",
+    "husky": "^4.3.8",
     "node-sass": "^5.0.0"
   }
 }
