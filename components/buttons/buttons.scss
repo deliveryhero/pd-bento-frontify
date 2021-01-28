@@ -1,7 +1,155 @@
 // BUTTON PRIMARY
 ///////////////////
-.button-primary-test {
+.bento-button-primary {
+    width: 100%;
+    height: 48px;
+    padding: $spacing-sm;
     color: $white;
     background-color: $fp-brand-primary;
-    @include title-lg;
+    @include highlight();
+    text-align: center;
+    border: none;
+    border-radius: $corner-radius-xs;
+    @include elevation-level-1();
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .bento-button-primary-left-element {
+       position: absolute;
+       top: 12px;
+       left: $spacing-sm;
+        svg path {
+            fill: $white;
+        }
+    }
+
+    .bento-button-primary-right-element {
+        position: absolute;
+        top: $spacing-sm;
+        right: $spacing-sm;
+    }
+
+    .bento-button-primary-label {
+        position: absolute;
+        top: $spacing-sm;
+        bottom: $spacing-sm;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .bento-button-primary-ripple {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $fp-interaction-primary-hover;
+        border-radius: 100%;
+        transform: scale(0);
+    }
+    &:active {
+        .bento-button-primary-ripple {
+            animation: button-primary-ripple .2s ease-in forwards;
+        }
+    }
+
+    &.basket-counter .bento-button-primary-left-element{
+        width: 24px;
+        height: 24px;
+        line-height: 1.5;
+        border: 1px solid $white;
+        border-radius: 100%;
+    }
+
+    &.basket-counter.multi-digits .bento-button-primary-left-element{
+        width: 43px;
+        height: 24px;
+        line-height: 1.5;
+        border: 1px solid $white;
+        border-radius: $corner-radius-sm;
+    }
+
+    &.loading, &.success {
+        background-color: $fp-interaction-primary-feedback;
+        box-shadow: none;
+        .bento-button-primary-loading-container {
+            margin-top: -8px;
+           .bent-loading-dot {
+               display: inline-block;
+               width: 4px;
+               height: 4px;
+               background-color: $fp-interaction-primary;
+               border-radius: 100%;
+               animation: button-primary-loading .5s linear infinite;
+               &:nth-child(2) {
+                animation: button-primary-loading .5s linear .15s infinite;
+               }
+               &:nth-child(3) {
+                animation: button-primary-loading .5s linear .3s infinite;
+               }
+           } 
+        }
+    }
+    
+    &.success .bento-primary-button-success-icon{
+        animation: button-primary-success .5s ease-in backwards;
+    }
+
+    &:disabled {
+        background-color: $neutral-inactive;
+        box-shadow: none;
+        cursor: not-allowed;
+        pointer-events: all !important;
+        &:active {
+            .bento-button-primary-ripple {
+                animation: none;
+            }
+        }
+    }
+}
+
+
+// BUTTON PRIMARY RIPPLE ANIMATION
+///////////////////
+@keyframes button-primary-ripple {
+    0% {
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(8);
+    }
+}
+
+// BUTTON PRIMARY LOADING ANIMATION
+///////////////////
+@keyframes button-primary-loading {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(3px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+// BUTTON PRIMARY SUCCESS ANIMATION
+///////////////////
+@keyframes button-primary-success {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    100% {
+        transform: scale(1);
+    }
 }

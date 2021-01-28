@@ -1,5 +1,118 @@
-.button-primary-test {
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+* {
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+  outline: none !important; }
+
+.bento-component-wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 0 auto; }
+
+.bento-button-primary {
+  width: 100%;
+  height: 48px;
+  padding: 16px;
   color: #FFFFFF;
   background-color: #D70F64;
-  font-size: 24px;
-  font-weight: 700; }
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.64);
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; }
+  .bento-button-primary .bento-button-primary-left-element {
+    position: absolute;
+    top: 12px;
+    left: 16px; }
+    .bento-button-primary .bento-button-primary-left-element svg path {
+      fill: #FFFFFF; }
+  .bento-button-primary .bento-button-primary-right-element {
+    position: absolute;
+    top: 16px;
+    right: 16px; }
+  .bento-button-primary .bento-button-primary-label {
+    position: absolute;
+    top: 16px;
+    bottom: 16px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+  .bento-button-primary .bento-button-primary-ripple {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #C60D5C;
+    border-radius: 100%;
+    transform: scale(0); }
+  .bento-button-primary:active .bento-button-primary-ripple {
+    animation: button-primary-ripple .2s ease-in forwards; }
+  .bento-button-primary.basket-counter .bento-button-primary-left-element {
+    width: 24px;
+    height: 24px;
+    line-height: 1.5;
+    border: 1px solid #FFFFFF;
+    border-radius: 100%; }
+  .bento-button-primary.basket-counter.multi-digits .bento-button-primary-left-element {
+    width: 43px;
+    height: 24px;
+    line-height: 1.5;
+    border: 1px solid #FFFFFF;
+    border-radius: 12px; }
+  .bento-button-primary.loading, .bento-button-primary.success {
+    background-color: #FDF1F5;
+    box-shadow: none; }
+    .bento-button-primary.loading .bento-button-primary-loading-container, .bento-button-primary.success .bento-button-primary-loading-container {
+      margin-top: -8px; }
+      .bento-button-primary.loading .bento-button-primary-loading-container .bent-loading-dot, .bento-button-primary.success .bento-button-primary-loading-container .bent-loading-dot {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #D70F64;
+        border-radius: 100%;
+        animation: button-primary-loading .5s linear infinite; }
+        .bento-button-primary.loading .bento-button-primary-loading-container .bent-loading-dot:nth-child(2), .bento-button-primary.success .bento-button-primary-loading-container .bent-loading-dot:nth-child(2) {
+          animation: button-primary-loading .5s linear .15s infinite; }
+        .bento-button-primary.loading .bento-button-primary-loading-container .bent-loading-dot:nth-child(3), .bento-button-primary.success .bento-button-primary-loading-container .bent-loading-dot:nth-child(3) {
+          animation: button-primary-loading .5s linear .3s infinite; }
+  .bento-button-primary.success .bento-primary-button-success-icon {
+    animation: button-primary-success .5s ease-in backwards; }
+  .bento-button-primary:disabled {
+    background-color: #CACACA;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: all !important; }
+    .bento-button-primary:disabled:active .bento-button-primary-ripple {
+      animation: none; }
+
+@keyframes button-primary-ripple {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(8); } }
+
+@keyframes button-primary-loading {
+  0% {
+    transform: translateY(0); }
+  50% {
+    transform: translateY(3px); }
+  100% {
+    transform: translateY(0); } }
+
+@keyframes button-primary-success {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.3); }
+  100% {
+    transform: scale(1); } }
