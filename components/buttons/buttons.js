@@ -1,3 +1,1 @@
-alert('It works!')
-
-let numberOne = document.querySelector('.demo-class')
+// IT'S EMPTY HERE!

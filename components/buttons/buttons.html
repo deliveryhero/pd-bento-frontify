@@ -5,10 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buttons</title>
     <!-- style -->
-    <link rel="stylesheet" href="../build/main.css">
+    <link rel="stylesheet" href="/build/main.css">
 </head>
 <body>
-    <button class="button-primary-test">Hello</button>
+    
+    <!-- bento component wrapper -->
+    <div class="bento-component-wrapper">
+        <!-- button primary | label only -->
+        <button class="bento-button-primary">
+            <span class="bento-button-primary-ripple"></span>
+            <span class="bento-button-primary-label">Label</span>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | active with icon -->
+        <button class="bento-button-primary">
+            <span class="bento-button-primary-ripple"></span>
+            <span class="bento-button-primary-left-element"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M7.004 5.176a3.832 3.832 0 00-3.828 3.829c0 2.919 2 5.035 8.824 10.623 6.824-5.588 8.824-7.706 8.824-10.623a3.833 3.833 0 00-3.829-3.829c-1.962 0-2.983 1.165-3.884 2.193L12 8.62l-1.108-1.245c-.906-1.033-1.927-2.198-3.888-2.198zM12 21.147l-.372-.303C4.17 14.754 2 12.46 2 9.004A5.01 5.01 0 017.004 4c2.494 0 3.809 1.499 4.769 2.595L12 6.85l.23-.257C13.185 5.499 14.5 4 16.993 4A5.01 5.01 0 0122 9.005c0 3.455-2.17 5.748-9.628 11.839l-.372.303z" id="a"/></defs><use fill="#707070" xlink:href="#a" fill-rule="evenodd"/></svg></span>
+            <span class="bento-button-primary-label">Label</span>
+            <span class="bento-button-primary-right-element">HK$ 1,000.00</span>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | basket-counter -->
+        <button class="bento-button-primary basket-counter">
+            <span class="bento-button-primary-ripple"></span>
+            <span class="bento-button-primary-left-element">3</span>
+            <span class="bento-button-primary-label">Label</span>
+            <span class="bento-button-primary-right-element">HK$ 1,000.00</span>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | basket-counter multi-digits -->
+        <button class="bento-button-primary basket-counter multi-digits">
+            <span class="bento-button-primary-ripple"></span>
+            <span class="bento-button-primary-left-element">99+</span>
+            <span class="bento-button-primary-label">Label</span>
+            <span class="bento-button-primary-right-element">HK$ 1,000.00</span>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | loading -->
+        <button class="bento-button-primary loading">
+            <div class="bento-button-primary-loading-container">
+                <span class="bent-loading-dot"></span>
+                <span class="bent-loading-dot"></span>
+                <span class="bent-loading-dot"></span>
+            </div>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | success -->
+        <button class="bento-button-primary success">
+            <div class="bento-primary-button-success-icon"><svg width="18" height="18" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-162 -15)" fill="none" fill-rule="evenodd"><rect fill="#FDF1F5" width="343" height="48" rx="8"/><path d="M171 15a9 9 0 110 18 9 9 0 010-18zm4.781 5.49a.746.746 0 00-1.057 0l-5.08 5.094-2.368-2.376-.084-.072a.746.746 0 00-.973.072.752.752 0 000 1.061l3.143 3.152v.001a.4.4 0 00.566 0l5.853-5.872.072-.084a.752.752 0 00-.072-.976z" fill="#D70F64"/></g></svg></div>
+        </button>
+
+        <br class="just-a-divider"> <!-- DO NOT COPY ME! -->
+
+        <!-- button primary | disabled -->
+        <button class="bento-button-primary" disabled>
+            <span class="bento-button-primary-ripple"></span>
+            <span class="bento-button-primary-left-element"><svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><path d="M7.004 5.176a3.832 3.832 0 00-3.828 3.829c0 2.919 2 5.035 8.824 10.623 6.824-5.588 8.824-7.706 8.824-10.623a3.833 3.833 0 00-3.829-3.829c-1.962 0-2.983 1.165-3.884 2.193L12 8.62l-1.108-1.245c-.906-1.033-1.927-2.198-3.888-2.198zM12 21.147l-.372-.303C4.17 14.754 2 12.46 2 9.004A5.01 5.01 0 017.004 4c2.494 0 3.809 1.499 4.769 2.595L12 6.85l.23-.257C13.185 5.499 14.5 4 16.993 4A5.01 5.01 0 0122 9.005c0 3.455-2.17 5.748-9.628 11.839l-.372.303z" id="a"/></defs><use fill="#707070" xlink:href="#a" fill-rule="evenodd"/></svg></span>
+            <span class="bento-button-primary-label">Label</span>
+            <span class="bento-button-primary-right-element">HK$ 1,000.00</span>
+        </button>
+    </div>
 
     <!-- JS -->
     <script src="./buttons.js"></script>
