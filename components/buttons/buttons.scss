@@ -153,3 +153,181 @@
         transform: scale(1);
     }
 }
+
+
+// BUTTON PRIMARY SMALL
+///////////////////
+.bento-button-primary-small {
+    width: 112px;
+    height: 32px;
+    padding: $spacing-xs $spacing-sm;
+    color: $white;
+    background-color: $fp-brand-primary;
+    @include highlight();
+    text-align: center;
+    border: none;
+    border-radius: $corner-radius-xs;
+    @include elevation-level-1();
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .bento-button-primary-small-label {
+        position: absolute;
+        top: $spacing-xs;
+        bottom: $spacing-sm;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .bento-button-primary-small-ripple {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $fp-interaction-primary-hover;
+        border-radius: 100%;
+        transform: scale(0);
+    }
+
+    &.loading, &.success {
+        background-color: $fp-interaction-primary-feedback;
+        box-shadow: none;
+        .bento-button-primary-small-loading-container {
+            margin-top: -8px;
+           .bent-loading-dot {
+               display: inline-block;
+               width: 4px;
+               height: 4px;
+               background-color: $fp-interaction-primary;
+               border-radius: 100%;
+               animation: button-primary-loading .5s linear infinite;
+               &:nth-child(2) {
+                animation: button-primary-loading .5s linear .15s infinite;
+               }
+               &:nth-child(3) {
+                animation: button-primary-loading .5s linear .3s infinite;
+               }
+           } 
+        }
+    }
+
+    &.success .bento-primary-button-small-success-icon{
+        animation: button-primary-success .5s ease-in backwards;
+    }
+
+    &:active {
+        .bento-button-primary-small-ripple {
+            animation: button-primary-ripple .2s ease-in forwards;
+            
+        }
+    }
+
+    &:disabled {
+        background-color: $neutral-inactive;
+        box-shadow: none;
+        cursor: not-allowed;
+        pointer-events: all !important;
+        &:active {
+            .bento-button-primary-ripple {
+                animation: none;
+            }
+        }
+    }
+}
+
+
+// BUTTON SECONDARY
+///////////////////
+.bento-button-secondary {
+    width: 100%;
+    height: 48px;
+    padding: $spacing-sm;
+    color: $fp-brand-primary;
+    background-color: $white;
+    @include highlight();
+    text-align: center;
+    border: 1px solid $fp-brand-primary;
+    border-radius: $corner-radius-xs;
+    @include elevation-level-1();
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .bento-button-secondary-label {
+        position: absolute;
+        top: $spacing-sm;
+        bottom: $spacing-sm;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .bento-button-secondary-ripple {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $fp-interaction-primary-feedback;
+        border-radius: 100%;
+        transform: scale(0);
+    }
+
+    &:active {
+        .bento-button-secondary-ripple {
+            animation: button-primary-ripple .2s ease-in forwards;
+        }
+    }
+
+    &.loading, &.success {
+        background-color: $fp-interaction-primary-feedback;
+        box-shadow: none;
+        border: none;
+        .bento-button-secondary-loading-container {
+            margin-top: -8px;
+           .bent-loading-dot {
+               display: inline-block;
+               width: 4px;
+               height: 4px;
+               background-color: $fp-interaction-primary;
+               border-radius: 100%;
+               animation: button-primary-loading .5s linear infinite;
+               &:nth-child(2) {
+                animation: button-primary-loading .5s linear .15s infinite;
+               }
+               &:nth-child(3) {
+                animation: button-primary-loading .5s linear .3s infinite;
+               }
+           } 
+        }
+    }
+    
+    &.success .bento-secondary-button-success-icon{
+        animation: button-primary-success .5s ease-in backwards;
+    }
+
+    &:disabled {
+        color: $white;
+        background-color: $neutral-inactive;
+        border: none;
+        box-shadow: none;
+        cursor: not-allowed;
+        pointer-events: all !important;
+        &:active {
+            .bento-button-secondary-ripple {
+                animation: none;
+            }
+        }
+    }
+}
