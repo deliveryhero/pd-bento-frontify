@@ -23,7 +23,7 @@
   text-align: center;
   border: none;
   border-radius: 8px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.64);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   cursor: pointer;
   overflow: hidden; }
@@ -130,7 +130,7 @@
   text-align: center;
   border: none;
   border-radius: 8px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.64);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   cursor: pointer;
   overflow: hidden; }
@@ -193,7 +193,7 @@
   text-align: center;
   border: 1px solid #D70F64;
   border-radius: 8px;
-  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.64);
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
   position: relative;
   cursor: pointer;
   overflow: hidden; }
