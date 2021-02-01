@@ -218,8 +218,10 @@
         }
     }
 
-    &.success .bento-primary-button-small-success-icon{
-        animation: button-primary-success .5s ease-in backwards;
+    &.success {
+        .bento-primary-button-small-success-icon {
+            animation: button-primary-success .5s ease-in backwards;
+        }
     }
 
     &:active {
