@@ -247,3 +247,163 @@
     pointer-events: all !important; }
     .bento-button-secondary:disabled:active .bento-button-secondary-ripple {
       animation: none; }
+
+.bento-button-text {
+  width: 110px;
+  height: 48px;
+  padding: 16px 8px;
+  color: #D70F64;
+  background-color: transparent;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  text-transform: uppercase;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden; }
+  .bento-button-text .bento-button-text-label {
+    position: absolute;
+    top: 14px;
+    left: 0;
+    right: 0;
+    margin: 0 auto; }
+  .bento-button-text .bento-button-text-ripple {
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background-color: #FDF1F5;
+    border-radius: 100%;
+    transform: scale(0); }
+  .bento-button-text:active .bento-button-text-ripple {
+    animation: button-primary-ripple .5s ease-in forwards; }
+  .bento-button-text.loading {
+    background-color: transparent;
+    box-shadow: none;
+    border: none; }
+    .bento-button-text.loading .bento-button-text-loading-container {
+      margin-top: -8px; }
+      .bento-button-text.loading .bento-button-text-loading-container .bent-loading-dot {
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        background-color: #D70F64;
+        border-radius: 100%;
+        animation: button-primary-loading .5s linear infinite; }
+        .bento-button-text.loading .bento-button-text-loading-container .bent-loading-dot:nth-child(2) {
+          animation: button-primary-loading .5s linear .15s infinite; }
+        .bento-button-text.loading .bento-button-text-loading-container .bent-loading-dot:nth-child(3) {
+          animation: button-primary-loading .5s linear .3s infinite; }
+  .bento-button-text:disabled {
+    color: #CACACA;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: all !important; }
+    .bento-button-text:disabled:active .bento-button-text-ripple {
+      animation: none; }
+
+.bento-button-toggle-or-container {
+  display: flex; }
+  .bento-button-toggle-or-container input {
+    opacity: 0;
+    width: 0; }
+    .bento-button-toggle-or-container input:checked + label {
+      background-color: #D70F64; }
+      .bento-button-toggle-or-container input:checked + label .bento-button-toggle-or-label {
+        color: #FFFFFF; }
+      .bento-button-toggle-or-container input:checked + label .bento-button-toggle-or-label-ripple {
+        background: #C60D5C; }
+  .bento-button-toggle-or-container label {
+    width: 64px;
+    height: 40px;
+    padding: 0 16px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; }
+    .bento-button-toggle-or-container label .bento-button-toggle-or-label-ripple {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: #FDF1F5;
+      border-radius: 100%;
+      transform: scale(0); }
+    .bento-button-toggle-or-container label .bento-button-toggle-or-label {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      color: #D70F64;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 2.8;
+      text-align: center;
+      text-transform: uppercase; }
+    .bento-button-toggle-or-container label:active .bento-button-toggle-or-label-ripple {
+      animation: button-primary-ripple .2s ease-in forwards; }
+
+.bento-button-toggle-and-container {
+  display: flex; }
+  .bento-button-toggle-and-container input {
+    opacity: 0;
+    width: 0; }
+    .bento-button-toggle-and-container input:checked + label {
+      background-color: #D70F64; }
+      .bento-button-toggle-and-container input:checked + label .bento-button-toggle-and-label {
+        color: #FFFFFF; }
+      .bento-button-toggle-and-container input:checked + label .bento-button-toggle-and-label-ripple {
+        background: #C60D5C; }
+  .bento-button-toggle-and-container label {
+    width: 64px;
+    height: 40px;
+    padding: 0 16px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden; }
+    .bento-button-toggle-and-container label .bento-button-toggle-and-label-ripple {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      background: #FDF1F5;
+      border-radius: 100%;
+      transform: scale(0); }
+    .bento-button-toggle-and-container label .bento-button-toggle-and-label {
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      color: #D70F64;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 2.8;
+      text-align: center;
+      text-transform: uppercase; }
+    .bento-button-toggle-and-container label:active .bento-button-toggle-and-label-ripple {
+      animation: button-primary-ripple .2s ease-in forwards; }

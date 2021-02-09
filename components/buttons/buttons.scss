@@ -333,3 +333,227 @@
         }
     }
 }
+
+
+// BUTTON TEXT
+///////////////////
+.bento-button-text {
+    width: 110px;
+    height: 48px;
+    padding: $spacing-sm $spacing-xs;
+    color: $fp-brand-primary;
+    background-color: transparent;
+    @include highlight();
+    text-align: center;
+    text-transform: uppercase;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+
+    .bento-button-text-label {
+        position: absolute;
+        top: 14px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+    }
+
+    .bento-button-text-ripple {
+        width: 48px;
+        height: 48px;
+        display: block;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background-color: $fp-interaction-primary-feedback;
+        border-radius: 100%;
+        transform: scale(0);
+    }
+
+    &:active {
+        .bento-button-text-ripple {
+            animation: button-primary-ripple .5s ease-in forwards;
+        }
+    }
+
+    &.loading {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        .bento-button-text-loading-container {
+            margin-top: -8px;
+           .bent-loading-dot {
+               display: inline-block;
+               width: 4px;
+               height: 4px;
+               background-color: $fp-interaction-primary;
+               border-radius: 100%;
+               animation: button-primary-loading .5s linear infinite;
+               &:nth-child(2) {
+                animation: button-primary-loading .5s linear .15s infinite;
+               }
+               &:nth-child(3) {
+                animation: button-primary-loading .5s linear .3s infinite;
+               }
+           } 
+        }
+    }
+
+    &:disabled {
+        color: $neutral-inactive;
+        background-color: transparent;
+        border: none;
+        box-shadow: none;
+        cursor: not-allowed;
+        pointer-events: all !important;
+        &:active {
+            .bento-button-text-ripple {
+                animation: none;
+            }
+        }
+    }
+}
+
+
+// BUTTON TOGGLE [OR]
+///////////////////
+.bento-button-toggle-or-container {
+    display: flex;
+
+    input {
+        opacity: 0;
+        width: 0;
+
+        &:checked + label {
+            background-color: $fp-interaction-primary;
+
+            .bento-button-toggle-or-label {
+                color: $white;
+            }
+
+            .bento-button-toggle-or-label-ripple {
+                background: $fp-interaction-primary-hover;
+            }
+        }
+    }
+
+    label {
+        width: 64px;
+        height: 40px;
+        padding: 0 $spacing-sm;
+        background-color: $white;
+        @include elevation-level-1;
+        border-radius: $corner-radius-lg;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        .bento-button-toggle-or-label-ripple {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: $spacing-xs;
+            bottom: $spacing-xs;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: $fp-interaction-primary-feedback;
+            border-radius: 100%;
+            transform: scale(0);
+        }
+
+        .bento-button-toggle-or-label {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            color: $fp-interaction-primary;
+            @include highlight();
+            line-height: 2.8;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &:active {
+            .bento-button-toggle-or-label-ripple {
+                animation: button-primary-ripple .2s ease-in forwards;
+            }
+        }
+    }
+}
+
+
+// BUTTON TOGGLE [AND]
+///////////////////
+.bento-button-toggle-and-container {
+    display: flex;
+
+    input {
+        opacity: 0;
+        width: 0;
+
+        &:checked + label {
+            background-color: $fp-interaction-primary;
+
+            .bento-button-toggle-and-label {
+                color: $white;
+            }
+
+            .bento-button-toggle-and-label-ripple {
+                background: $fp-interaction-primary-hover;
+            }
+        }
+    }
+
+    label {
+        width: 64px;
+        height: 40px;
+        padding: 0 $spacing-sm;
+        background-color: $white;
+        @include elevation-level-1;
+        border-radius: $corner-radius-lg;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+
+        .bento-button-toggle-and-label-ripple {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: $spacing-xs;
+            bottom: $spacing-xs;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background: $fp-interaction-primary-feedback;
+            border-radius: 100%;
+            transform: scale(0);
+        }
+
+        .bento-button-toggle-and-label {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            color: $fp-interaction-primary;
+            @include highlight();
+            line-height: 2.8;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        &:active {
+            .bento-button-toggle-and-label-ripple {
+                animation: button-primary-ripple .2s ease-in forwards;
+            }
+        }
+    }
+}
