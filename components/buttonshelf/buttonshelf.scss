@@ -1,0 +1,46 @@
+// BUTTONSHELF
+///////////////////
+.bento-buttonshelf {
+    display: flex;
+    width: 100%;
+    padding: $spacing-sm;
+    background-color: $white;
+    border-top-left-radius: $corner-radius-xs;
+    border-top-right-radius: $corner-radius-xs;
+    @include elevation-level-3();
+
+    &.with-text {
+        flex-direction: column;
+
+        .bento-buttonshelf-text {
+            align-self: flex-start;
+            margin: 0;
+            padding: 0 0 $spacing-xs 0;
+            @include highlight();
+            color: $neutral-primary;
+        }
+    }
+
+    .spacer {
+        min-width: $spacing-sm;
+        min-height: $spacing-sm;
+    }
+
+    &.two-cta-vertical {
+        flex-direction: column;
+    }
+
+    &.two-cta-horizontal {
+        flex-direction: row;
+    }
+
+    &.secondary {
+        border-top: 1px solid $neutral-divider;
+        border-radius: $corner-radius-zero;
+        @include elevation-level-0();
+
+        &.sticky {
+            @include elevation-level-3();
+        }
+    }
+}
