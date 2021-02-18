@@ -407,3 +407,85 @@
       text-transform: uppercase; }
     .bento-button-toggle-and-container label:active .bento-button-toggle-and-label-ripple {
       animation: button-primary-ripple .2s ease-in forwards; }
+
+.bento-buttonshelf {
+  display: flex;
+  width: 100%;
+  padding: 16px;
+  background-color: #FFFFFF;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.1); }
+  .bento-buttonshelf.with-text {
+    flex-direction: column; }
+    .bento-buttonshelf.with-text .bento-buttonshelf-text {
+      align-self: flex-start;
+      margin: 0;
+      padding: 0 0 8px 0;
+      font-size: 14px;
+      font-weight: 700;
+      color: #333333; }
+  .bento-buttonshelf .spacer {
+    min-width: 16px;
+    min-height: 16px; }
+  .bento-buttonshelf.two-cta-vertical {
+    flex-direction: column; }
+  .bento-buttonshelf.two-cta-horizontal {
+    flex-direction: row; }
+  .bento-buttonshelf.secondary {
+    border-top: 1px solid #EBEBEB;
+    border-radius: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0); }
+    .bento-buttonshelf.secondary.sticky {
+      box-shadow: 3px 3px 20px 0 rgba(0, 0, 0, 0.1); }
+
+.bento-pill {
+  width: 48px;
+  height: 32px;
+  position: relative;
+  background-color: #D70F64;
+  border: none;
+  border-radius: 16px;
+  box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  overflow: hidden; }
+  .bento-pill .bento-pill-ripple {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 8px;
+    bottom: 8px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    background: #C60D5C;
+    border-radius: 100%;
+    transform: scale(0); }
+  .bento-pill .bento-pill-label {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    font-size: 14px;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 0;
+    text-transform: uppercase; }
+  .bento-pill:active .bento-pill-ripple {
+    animation: button-primary-ripple .2s ease-in forwards; }
+  .bento-pill.inactive {
+    background-color: #FFFFFF; }
+    .bento-pill.inactive .bento-pill-label {
+      color: #D70F64; }
+    .bento-pill.inactive .bento-pill-ripple {
+      background: #FDF1F5; }
+  .bento-pill:disabled {
+    background-color: #CACACA;
+    box-shadow: none;
+    cursor: not-allowed;
+    pointer-events: all !important; }
+    .bento-pill:disabled:active .bento-button-primary-ripple {
+      animation: none; }

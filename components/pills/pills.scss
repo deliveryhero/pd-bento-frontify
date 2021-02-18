@@ -1,0 +1,72 @@
+// PILLS
+///////////////////
+.bento-pill {
+    width: 48px;
+    height: 32px;
+    position: relative;
+    background-color: $fp-interaction-primary;
+    border: none;
+    border-radius: $corner-radius-md;
+    @include elevation-level-1();
+    cursor: pointer;
+    overflow: hidden;
+
+    .bento-pill-ripple {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: $spacing-xs;
+        bottom: $spacing-xs;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        background: $fp-interaction-primary-hover;
+        border-radius: 100%;
+        transform: scale(0);
+    }
+
+    .bento-pill-label {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        @include highlight();
+        color: $white;
+        text-align: center;
+        line-height: 0;
+        text-transform: uppercase;
+    }
+
+    &:active {
+        .bento-pill-ripple {
+            animation: button-primary-ripple .2s ease-in forwards;
+        }
+    }
+
+    &.inactive {
+        background-color: $white;
+
+        .bento-pill-label {
+            color: $fp-interaction-primary;
+        }
+        
+        .bento-pill-ripple {
+            background: $fp-interaction-primary-feedback;
+        }
+    }
+
+    &:disabled {
+        background-color: $neutral-inactive;
+        box-shadow: none;
+        cursor: not-allowed;
+        pointer-events: all !important;
+        
+        &:active {
+            .bento-button-primary-ripple {
+                animation: none;
+            }
+        }
+    }
+}
