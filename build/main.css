@@ -7,7 +7,7 @@
 .bento-component-wrapper {
   display: flex;
   flex-direction: column;
-  max-width: 360px;
+  width: 360px;
   margin: 0 auto; }
   .bento-component-wrapper * {
     align-self: center; }
