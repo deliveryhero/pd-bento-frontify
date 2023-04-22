@@ -24,7 +24,7 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-bundle-file": "^1.1.2",
-    "gulp-sass": "^4.1.0",
+    "gulp-sass": "^5.1.0",
     "husky": "^4.3.8",
     "node-sass": "^5.0.0"
   }
